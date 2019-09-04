@@ -3,6 +3,8 @@
 	import flash.utils.setInterval;
 	import flash.events.MouseEvent;
 	
+	// TODO: MOVE THIS CLUSTERFUCK SOMEWHERE ELSE
+	
 	public class Start {
 
 		private var parent:MovieClip;
