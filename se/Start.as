@@ -3,13 +3,11 @@
 	import flash.utils.setInterval;
 	import flash.events.MouseEvent;
 	
-	// TODO: MOVE THIS CLUSTERFUCK SOMEWHERE ELSE
-	
 	public class Start {
 
 		private var parent:MovieClip;
 		private var clockFlipped:Boolean = false;
-		private var db:Database;
+		public static var db:Database;
 
 		public function zeroPad(number:int, width:int):String {
 			var ret:String = "" + number;
@@ -24,18 +22,16 @@
 
 		public function Start(parent:MovieClip) {
 			this.parent = parent;
-
-			this.db = new Database(new DefaultDatabase());
 			
 			parent.Notes.addEventListener(MouseEvent.CLICK, function(e:MouseEvent) {
-				var c:NotesClip = new NotesClip(parent);
-				parent.addChild(c);
+				parent.NotesInstance.visible = true;
 			});
 			
 			parent.Settings.addEventListener(MouseEvent.CLICK, function(e:MouseEvent) {
-				var c:SettingsClip = new SettingsClip(parent);
-				parent.addChild(c);
+				parent.SettingsInstance.visible = true;
 			});
+			
+			db = new Database(new DefaultDatabase());
 			
 			var callback:Function = function() {
 				var now:Date = new Date();
@@ -56,11 +52,11 @@
 				parent.Date.text = day + ", " + zeroPad(now.date, 2) + "." + zeroPad(now.month + 1, 2) + "." + now.fullYear;
 				clockFlipped = !clockFlipped;
 				
-				var setFlag:Boolean;
+				var setFlag:Boolean = true;
 				
 				/* Arriving bus */
 				
-				for(var i:int = 0, setFlag = true; i < db.arrivingBuses.length; i++) {
+				for(var i:int = 0; i < db.arrivingBuses.length; i++) {
 					if(db.arrivingBuses[i].hour >= now.hours) {
 						if(db.arrivingBuses[i].hour == now.hours && db.arrivingBuses[i].minute < now.minutes)
 							continue;

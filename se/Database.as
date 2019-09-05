@@ -6,6 +6,7 @@
 		public var start:Hour;
 		public var breaks:Array;
 		public var schedule:Array;
+		public var notes:String;
 		
 		public static var started:Boolean = true;
 		
@@ -16,6 +17,7 @@
 				this.departingBuses = DefaultDatabase.departingBuses();
 				this.schedule = DefaultDatabase.schedule();
 				this.start = DefaultDatabase.start();
+				this.notes = "";
 			}
 		}
 	}

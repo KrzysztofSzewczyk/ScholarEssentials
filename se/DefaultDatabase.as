@@ -71,50 +71,51 @@
 		public static function schedule():Array {
 			return new Array(
 				new SchoolDay(new Array(
-					new SchoolHour("Język Polski", 1),
-					new SchoolHour("Geografia", 2),
+					new SchoolHour("Język Polski s19", 1),
+					new SchoolHour("Geografia s1", 2),
 					new SchoolHour("WF", 3),
 					new SchoolHour("WF", 4),
-					new SchoolHour("Język Niemiecki", 5),
-					new SchoolHour("Język Angielski", 6)
+					new SchoolHour("Język Niem. s63 / Język Hiszp. s27", 5),
+					new SchoolHour("Język Angielski s16 / s1", 6)
 				)),
 				
 				new SchoolDay(new Array(
-					new SchoolHour("Matematyka", 2),
-					new SchoolHour("Język Angielski", 3),
-					new SchoolHour("Wiedza o Kulturze", 4),
+					new SchoolHour("Informatyka s20", 1),
+					new SchoolHour("Matematyka s29", 2),
+					new SchoolHour("Język Angielski s16 / s30", 3),
+					new SchoolHour("Wiedza o Kulturze s27", 4),
 					new SchoolHour("Basen", 5),
-					new SchoolHour("Chemia", 6),
-					new SchoolHour("Podstawy Przedsiębiorczości", 7),
-					new SchoolHour("Godzina Wychowawcza", 8)
+					new SchoolHour("Chemia s5", 6),
+					new SchoolHour("Podstawy Przedsiębiorczości s4", 7),
+					new SchoolHour("Godzina Wychowawcza s11", 8)
 				)),
 				
 				new SchoolDay(new Array(
-					new SchoolHour("Biologia", 1),
-					new SchoolHour("Matematyka", 2),
-					new SchoolHour("Edukacja dla Bezpieczeństwa", 3),
-					new SchoolHour("Język Polski", 4),
-					new SchoolHour("Język Polski", 5),
+					new SchoolHour("Biologia s25", 1),
+					new SchoolHour("Matematyka s12", 2),
+					new SchoolHour("Edukacja dla Bezpieczeństwa s3", 3),
+					new SchoolHour("Język Polski s27", 4),
+					new SchoolHour("Język Polski s27", 5),
 					new SchoolHour("Religia", 6)
 				)),
 				
 				new SchoolDay(new Array(
-					new SchoolHour("Język Polski", 2),
-					new SchoolHour("Fizyka", 3),
-					new SchoolHour("Matematyka", 4),
-					new SchoolHour("Historia", 5),
-					new SchoolHour("Język Niemiecki", 6),
-					new SchoolHour("Podstawy Przedsiębiorczości", 7),
-					new SchoolHour("Informatyka", 8)
+					new SchoolHour("Język Polski s19", 2),
+					new SchoolHour("Fizyka s10", 3),
+					new SchoolHour("Matematyka s12", 4),
+					new SchoolHour("Historia s19", 5),
+					new SchoolHour("Język Niem. s11 / Język Hiszp. s27", 6),
+					new SchoolHour("Podstawy Przedsiębiorczości s4", 7),
+					new SchoolHour("Informatyka s20", 8)
 				)),
 				
 				new SchoolDay(new Array(
 					new SchoolHour("Religia", 1),
-					new SchoolHour("Język Angielski", 2),
-					new SchoolHour("Matematyka", 3),
-					new SchoolHour("Język Polski", 4),
-					new SchoolHour("Historia", 5),
-					new SchoolHour("Wiedza o Społeczeństwie", 6)
+					new SchoolHour("Język Angielski s16 / s13", 2),
+					new SchoolHour("Matematyka s12", 3),
+					new SchoolHour("Język Polski s22", 4),
+					new SchoolHour("Historia s19", 5),
+					new SchoolHour("Wiedza o Społeczeństwie s25", 6)
 				))
 			);
 		}

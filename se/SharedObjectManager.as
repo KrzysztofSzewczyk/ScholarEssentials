@@ -2,11 +2,11 @@
 	import flash.net.SharedObject;
 	
 	public class SharedObjectManager {
-		private shroot:SharedObject;
+		private var shroot:SharedObject;
 		
-		private static instance:SharedObjectManager;
+		private static var instance:SharedObjectManager;
 
-		private function SharedObjectManager() {
+		public function SharedObjectManager() {
 			shroot = SharedObject.getLocal("shroot");
 		}
 		
@@ -17,7 +17,7 @@
 			return instance;
 		}
 		
-		public function get sharedObject():* {
+		public function get sharedObject():SharedObject {
 			return shroot;
 		}
 	}
