@@ -25,6 +25,7 @@
 			
 			parent.Notes.addEventListener(MouseEvent.CLICK, function(e:MouseEvent) {
 				parent.NotesInstance.visible = true;
+				parent.NotesInstance.run();
 			});
 			
 			parent.Settings.addEventListener(MouseEvent.CLICK, function(e:MouseEvent) {

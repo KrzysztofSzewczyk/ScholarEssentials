@@ -6,11 +6,27 @@
 	
 	
 	public class NotesClip extends MovieClip {
-		private var instance:NotesClip;
+		private function handler(e:MouseEvent):void {
+			visible = false;
+			Start.db.notes = Notes.text;
+			SharedObjectManager.progmem.data.notes = Start.db.notes;
+			SharedObjectManager.progmem.flush();
+		}
+		
+		public function run():void {
+			if(Start.db.notes == null) {
+				if(SharedObjectManager.progmem.data.notes == null) {
+					SharedObjectManager.progmem.data.notes = Start.db.notes = "";
+					SharedObjectManager.progmem.flush();
+				} else {
+					Start.db.notes = SharedObjectManager.progmem.data.notes as String;
+				}
+			}
+			
+			Notes.text = Start.db.notes;
+		}
 		
 		public function NotesClip() {
-			instance = this;
-			
 			var tf:TextFormat = new TextFormat();
 
 			tf.font = "Arial Black";
@@ -19,11 +35,7 @@
 			
 			Notes.setStyle("textFormat", tf);
 			
-			SaveAndQuit.addEventListener(MouseEvent.CLICK, function(e:MouseEvent) { 
-				instance.visible = false;
-				Start.db.notes = Notes.text;
-				SaveAndQuit.removeEventListener(MouseEvent.CLICK, this);
-			});
+			SaveAndQuit.addEventListener(MouseEvent.CLICK, handler);
 		}
 	}
 	

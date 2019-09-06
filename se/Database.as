@@ -17,7 +17,7 @@
 				this.departingBuses = DefaultDatabase.departingBuses();
 				this.schedule = DefaultDatabase.schedule();
 				this.start = DefaultDatabase.start();
-				this.notes = "";
+				this.notes = null;
 			}
 		}
 	}
