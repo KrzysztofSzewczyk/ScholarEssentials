@@ -5,15 +5,13 @@
 	
 	
 	public class SettingsClip extends MovieClip {
-		private var instance:SettingsClip;
+		private function handler(m:MouseEvent):void {
+			visible = false;
+			SaveAndQuit.removeEventListener(MouseEvent.CLICK, handler);
+		}
 		
 		public function SettingsClip() {
-			instance = this;
-			
-			SaveAndQuit.addEventListener(MouseEvent.CLICK, function(e:MouseEvent) { 
-				instance.visible = false;
-				SaveAndQuit.removeEventListener(MouseEvent.CLICK, this);
-			});
+			SaveAndQuit.addEventListener(MouseEvent.CLICK, handler);
 		}
 	}
 	
