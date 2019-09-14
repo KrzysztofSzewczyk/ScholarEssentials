@@ -62,9 +62,9 @@
 				new Break(new Hour(9, 40), 10),
 				new Break(new Hour(10, 35), 10),
 				new Break(new Hour(11, 30), 20),
-				new Break(new Hour(12, 35), 10),
-				new Break(new Hour(13, 30), 15),
-				new Break(new Hour(14, 30), 5)
+				new Break(new Hour(12, 35), 20),
+				new Break(new Hour(13, 40), 15),
+				new Break(new Hour(14, 40), 5)
 			);
 		}
 		
